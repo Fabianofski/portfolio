@@ -1,29 +1,32 @@
 <script>
-  let counter = 0;
-
-  function incrementCount() {
-    counter++;
-  }
 </script>
 
 <div class="container">
-  <button on:click={incrementCount}>{counter}</button>
+	<h1>Content</h1>
 </div>
 
 <style>
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	.container {
+		width: 100%;
+		min-height: 100vh;
 
-    height: 100vh;
-    width: 100vw;
-  }
+		background: linear-gradient(
+			90deg,
+			var(--secondary-background-color) 0,
+			var(--background-color) 100%
+		);
+		background-size: 300%;
+		background-position-x: 80%;
 
-  button {
-    font-size: 5rem;
+		animation: background-fade-in 4s ease-in-out;
+	}
 
-    height: 10rem;
-    width: 10rem;
-  }
+	@keyframes background-fade-in {
+		0% {
+			background-position-x: 0;
+		}
+		100% {
+			background-position-x: 80%;
+		}
+	}
 </style>
