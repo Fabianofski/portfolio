@@ -2,8 +2,8 @@
 	import HeroSection from './HeroSection.svelte';
 </script>
 
-<div class="container">
-	<div class="grid">
+<div class="container" id="home">
+	<div class="grid hero-section">
 		<HeroSection />
 	</div>
 </div>
@@ -14,7 +14,7 @@
 		justify-content: center;
 
 		width: 100%;
-		min-height: 100vh;
+		min-height: 150vh;
 
 		background: linear-gradient(
 			135deg,
@@ -22,10 +22,10 @@
 			var(--background-color) 100%
 		);
 		background-size: 300%;
-		background-position-x: 80%;
+		background-position-x: 100%;
 		padding-top: 10rem;
 
-		animation: background-fade-in 3s ease-in-out;
+		animation: background-fade-in 3s var(--ease-out-expo);
 	}
 
 	@keyframes background-fade-in {
@@ -33,7 +33,7 @@
 			background-position-x: 0;
 		}
 		100% {
-			background-position-x: 80%;
+			background-position-x: 100%;
 		}
 	}
 

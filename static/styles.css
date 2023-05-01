@@ -1,10 +1,14 @@
 :root {
 	--background-color: #1b1c2a;
-	--secondary-background-color: #363360;
+	--secondary-background-color: #2a284f;
 	--text-color: #cdd0f5;
 	--primary-color: #eee066;
 
 	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 * {

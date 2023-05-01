@@ -13,7 +13,11 @@
 		display: flex;
 		align-items: center;
 
+		position: fixed;
+		z-index: 99;
+
 		height: 3rem;
+		width: 100%;
 		padding: 1rem;
 		background-color: var(--background-color);
 

@@ -1,6 +1,10 @@
+<script>
+	import Greetings from './Greetings.svelte';
+</script>
+
 <div class="text">
 	<div>
-		<h1 class="greeting">Hi! My Name is</h1>
+		<Greetings />
 		<h1>FABIAN FRIEDRICH</h1>
 	</div>
 </div>
@@ -22,16 +26,6 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 1rem;
-
-		scale: 0;
-		opacity: 0;
-		animation: fade-in 1.5s var(--ease-out-expo) forwards,
-			scale-up 1.5s var(--ease-out-expo) forwards;
-	}
-
-	.greeting {
-		font-family: 'Dancing Script', serif;
-		color: var(--primary-color);
 	}
 
 	.text h1 {
@@ -61,6 +55,16 @@
 	.contact-btn {
 		grid-column-start: 5;
 		grid-column-end: 7;
+
+		background-color: var(--background-color);
+
+		color: var(--primary-color);
+	}
+
+	.contact-btn:hover {
+		background-color: var(--primary-color);
+
+		color: var(--background-color);
 	}
 
 	.profile {
