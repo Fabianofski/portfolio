@@ -23,6 +23,7 @@
 		);
 		background-size: 300%;
 		background-position-x: 80%;
+		padding-top: 10rem;
 
 		animation: background-fade-in 3s ease-in-out;
 	}

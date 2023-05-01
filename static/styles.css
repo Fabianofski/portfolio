@@ -1,21 +1,23 @@
 :root {
-  --background-color: #1b1c2a;
-  --secondary-background-color: #363360;
-  --text-color: #cdd0f5;
-  --primary-color: #eee066;
+	--background-color: #1b1c2a;
+	--secondary-background-color: #363360;
+	--text-color: #cdd0f5;
+	--primary-color: #eee066;
+
+	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  font-family: "Bitter", serif;
-  color: var(--text-color)
+	margin: 0;
+	padding: 0;
+	font-family: 'Bitter', serif;
+	color: var(--text-color);
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 img,
@@ -23,33 +25,36 @@ picture,
 video,
 canvas,
 svg {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
 
 a {
-  color: var(--text-color);
-  text-decoration: none;
+	color: var(--text-color);
+	text-decoration: none;
 }
 
 a:hover {
-  color: var(--primary-color);
+	color: var(--primary-color);
 }
 
 button {
-  background-color: var(--primary-color);
-  min-height: 1rem;
-  padding: .5rem;
+	background-color: var(--primary-color);
+	min-height: 1rem;
+	padding: 0.5rem;
 
-  color: var(--background-color);
+	color: var(--background-color);
 
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
+	border: 2px solid var(--primary-color);
+	border-radius: 10px;
 
-  transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: var(--background-color);
-  color: var(--primary-color);
+	background-color: var(--background-color);
+
+	color: var(--primary-color);
+
+	cursor: pointer;
 }

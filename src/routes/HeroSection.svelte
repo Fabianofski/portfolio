@@ -22,6 +22,11 @@
 		flex-direction: column;
 		justify-content: center;
 		gap: 1rem;
+
+		scale: 0;
+		opacity: 0;
+		animation: fade-in 1.5s var(--ease-out-expo) forwards,
+			scale-up 1.5s var(--ease-out-expo) forwards;
 	}
 
 	.greeting {
@@ -41,6 +46,11 @@
 
 		font-size: 28px;
 		font-weight: bold;
+
+		scale: 0;
+		opacity: 0;
+		animation: fade-in 1.5s var(--ease-out-expo) forwards,
+			scale-up 1.5s var(--ease-out-expo) forwards;
 	}
 
 	.download-btn {
@@ -66,6 +76,7 @@
 
 		border-radius: 50%;
 		overflow: hidden;
+		animation: scale-up 1s var(--ease-out-expo);
 	}
 
 	.profile .gradient {
@@ -79,12 +90,27 @@
 		);
 
 		border-radius: 50%;
+		scale: 0;
+		animation: scale-up 0.5s var(--ease-out-expo) 0.1s forwards;
 	}
 
 	.profile img {
 		position: absolute;
-		left: 50%;
-		top: 40%;
 		transform: translate(-50%, -50%);
+
+		opacity: 0;
+		animation: fade-in 2s var(--ease-out-expo) 0.2s forwards,
+			slide-img-in 1s var(--ease-out-expo) 0.2s forwards;
+	}
+
+	@keyframes slide-img-in {
+		0% {
+			top: 100%;
+			left: 70%;
+		}
+		100% {
+			top: 40%;
+			left: 50%;
+		}
 	}
 </style>
