@@ -40,7 +40,7 @@
 	<img src="/profile.png" alt="profile" />
 </div>
 <button class="download-btn">Download CV</button>
-<button class="contact-btn"> Contact Me</button>
+<a class="contact-btn a-btn" href="mailto:friedrich.fabian@gmx.net">Contact Me</a>
 
 <style>
 	.text {
@@ -61,7 +61,8 @@
 		white-space: nowrap;
 	}
 
-	button {
+	button,
+	.contact-btn {
 		grid-column: span 2;
 		grid-row-start: 3;
 

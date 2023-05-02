@@ -42,7 +42,8 @@ a:hover {
 	color: var(--primary-color);
 }
 
-button {
+button,
+.a-btn {
 	background-color: var(--primary-color);
 	min-height: 1rem;
 	padding: 0.5rem;
@@ -55,7 +56,14 @@ button {
 	transition: all 0.3s ease;
 }
 
-button:hover {
+.a-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+button:hover,
+.a-btn {
 	background-color: var(--background-color);
 
 	color: var(--primary-color);
