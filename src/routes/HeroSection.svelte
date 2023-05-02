@@ -39,7 +39,7 @@
 	<div class="gradient" />
 	<img src="/profile.png" alt="profile" />
 </div>
-<button class="download-btn">Download CV</button>
+<a class="download-btn a-btn" href="/CV.pdf" download>Download CV</a>
 <a class="contact-btn a-btn" href="mailto:friedrich.fabian@gmx.net">Contact Me</a>
 
 <style>
@@ -61,8 +61,7 @@
 		white-space: nowrap;
 	}
 
-	button,
-	.contact-btn {
+	.a-btn {
 		grid-column: span 2;
 		grid-row-start: 3;
 
@@ -133,8 +132,14 @@
 		transform: translate(-50%, -50%);
 
 		opacity: 0;
+		scale: 1;
 		animation: fade-in 2s var(--ease-out-expo) 0.2s forwards,
 			slide-img-in 1s var(--ease-out-expo) 0.2s forwards;
+		transition: scale 1s var(--ease-out-expo);
+	}
+
+	.profile img:hover {
+		scale: 1.05;
 	}
 
 	@keyframes slide-img-in {

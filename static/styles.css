@@ -63,7 +63,7 @@ button,
 }
 
 button:hover,
-.a-btn {
+.a-btn:hover {
 	background-color: var(--background-color);
 
 	color: var(--primary-color);
