@@ -1,12 +1,38 @@
 <script>
 	import Greetings from './Greetings.svelte';
+	import { onMount } from 'svelte';
+	onMount(() => {
+		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+		const name = document.querySelector('.name');
+		const text = name.dataset.value;
+		let interval = null;
+		let iteration = 0;
+		interval = setInterval(() => {
+			name.innerText = text
+				.split('')
+				.map((letter, index) => {
+					if (index < iteration) {
+						return name.dataset.value[index];
+					}
+					if (index < iteration + 4) {
+						return letters[Math.floor(Math.random() * 26)];
+					}
+				})
+				.join('');
+
+			if (iteration >= name.dataset.value.length) {
+				clearInterval(interval);
+			}
+
+			iteration += 1 / 3;
+		}, 70);
+	});
 </script>
 
 <div class="text">
-	<div>
-		<Greetings />
-		<h1>FABIAN FRIEDRICH</h1>
-	</div>
+	<Greetings />
+	<h1 data-value="FABIAN FRIEDRICH" class="name" />
 </div>
 
 <div class="profile">
@@ -22,14 +48,17 @@
 		grid-column-end: 7;
 		grid-row: span 2;
 
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		gap: 1rem;
+		position: relative;
 	}
 
-	.text h1 {
+	.text .name {
+		position: absolute;
+		top: 65%;
+		left: 0;
+		transform: translateY(-50%);
+
 		font-size: 56px;
+		white-space: nowrap;
 	}
 
 	button {

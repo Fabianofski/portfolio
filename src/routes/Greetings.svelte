@@ -311,64 +311,67 @@
 	}
 
 	.greeting {
+		position: absolute;
+		top: 10%;
+
 		color: #fff;
 		stroke-dashoffset: 1000;
 		stroke-dasharray: 1000;
 	}
 
 	#mask_H_1 {
-		animation: dash 0.3s linear 1s forwards;
+		animation: dash 0.3s linear forwards;
 	}
 	#mask_H_2 {
-		animation: dash 0.3s linear 1.3s forwards;
+		animation: dash 0.3s linear 0.3s forwards;
 	}
 	#mask_H_3 {
-		animation: dash 0.3s linear 1.6s forwards;
+		animation: dash 0.3s linear 0.6s forwards;
 	}
 	#mask_i_1 {
-		animation: dash 0.2s linear 1.9s forwards;
+		animation: dash 0.2s linear 0.9s forwards;
 	}
 	#mask_i_2 {
-		animation: dash 0.1s linear 2.1s forwards;
+		animation: dash 0.1s linear 1.1s forwards;
 	}
 	#mask_Ex_1 {
-		animation: dash 0.2s linear 2.2s forwards;
+		animation: dash 0.2s linear 1.2s forwards;
 	}
 	#mask_Ex_2 {
-		animation: dash 0.1s linear 2.4s forwards;
+		animation: dash 0.1s linear 1.4s forwards;
 	}
 	#mask_M_1 {
-		animation: dash 0.2s linear 2.5s forwards;
+		animation: dash 0.2s linear 1.5s forwards;
 	}
 	#mask_M_2 {
-		animation: dash 0.3s linear 2.7s forwards;
+		animation: dash 0.3s linear 1.7s forwards;
 	}
 	#mask_y {
-		animation: dash 0.4s linear 3s forwards;
+		animation: dash 0.4s linear 2s forwards;
 	}
 	#mask_N_1 {
-		animation: dash 0.2s linear 3.4s forwards;
+		animation: dash 0.2s linear 2.4s forwards;
 	}
 	#mask_N_2 {
-		animation: dash 0.2s linear 3.6s forwards;
+		animation: dash 0.2s linear 2.6s forwards;
 	}
 	#mask_a {
-		animation: dash 0.4s linear 3.8s forwards;
+		animation: dash 0.4s linear 2.8s forwards;
 	}
 	#mask_m {
-		animation: dash 0.4s linear 4.2s forwards;
+		animation: dash 0.4s linear 3.2s forwards;
 	}
 	#mask_e {
-		animation: dash 0.4s linear 4.6s forwards;
+		animation: dash 0.4s linear 3.6s forwards;
 	}
 	#mask_is_i_1 {
-		animation: dash 0.2s linear 5s forwards;
+		animation: dash 0.2s linear 4s forwards;
 	}
 	#mask_is_i_2 {
-		animation: dash 0.1s linear 5.2s forwards;
+		animation: dash 0.1s linear 4.2s forwards;
 	}
 	#mask_s {
-		animation: dash 0.4s linear 5.3s forwards;
+		animation: dash 0.4s linear 4.3s forwards;
 	}
 	@keyframes dash {
 		to {
