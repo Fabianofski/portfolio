@@ -1,38 +1,18 @@
-# create-svelte
+# Fabian Friedrich - Portfolio
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+This is the codebase for my personal portfolio website, built with Svelte.
 
-## Creating a project
+## Getting Started
 
-If you're seeing this, you've probably already done this step. Congrats!
+To get started with this project, you'll need to have Node.js and npm installed on your system. Then, follow these
+steps:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+1. Clone this repository to your local machine
+2. Open a terminal and navigate to the project directory
+3. Run ``npm install`` to install the project dependencies
+4. Run ``npm run dev`` to start the development server
+5. Open your browser and navigate to [http://localhost:5000/](http://localhost:5000/)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## License
 
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This project is licensed under the MIT License. See the LICENSE file for more information.
