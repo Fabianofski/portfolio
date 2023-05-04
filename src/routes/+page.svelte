@@ -25,7 +25,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 15rem;
+		gap: min(15rem, 10vw);
 
 		width: 100%;
 		min-height: 300vh;
@@ -37,7 +37,7 @@
 		);
 		background-size: 300%;
 		background-position-x: 100%;
-		padding-top: 12rem;
+		padding-top: min(12rem, 10vw);
 
 		animation: background-fade-in 3s var(--ease-out-expo);
 	}
@@ -61,5 +61,11 @@
 		max-width: 80rem;
 		height: 100%;
 		padding-top: 3rem;
+	}
+
+	@media (min-width: 800px) {
+		.grid {
+			gap: 1rem;
+		}
 	}
 </style>

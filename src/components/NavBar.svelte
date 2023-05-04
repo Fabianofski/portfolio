@@ -1,6 +1,6 @@
 <nav>
 	<p>Fabian.Dev</p>
-	<ul>
+	<ul class="list">
 		<li><a href="#home">Home</a></li>
 		<li><a href="#education">Education</a></li>
 		<li><a href="#projects">Projects</a></li>
@@ -12,6 +12,7 @@
 	nav {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 
 		position: fixed;
 		z-index: 99;
@@ -24,23 +25,25 @@
 		box-shadow: 0 6px 4px rgba(0, 0, 0, 0.25);
 	}
 
-	p {
-		width: 60%;
-	}
-
 	a,
 	p {
 		font-weight: bold;
 	}
 
-	ul {
+	.list {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: flex-end;
 		align-items: center;
+		gap: 3rem;
 
 		height: 100%;
-		width: 40%;
 
 		list-style: none;
+	}
+
+	@media (max-width: 1000px) {
+		.list {
+			display: none;
+		}
 	}
 </style>

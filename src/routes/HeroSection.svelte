@@ -35,9 +35,11 @@
 	<h1 data-value="FABIAN FRIEDRICH" class="name" />
 </div>
 
-<div class="profile">
-	<div class="gradient" />
-	<img src="/profile.png" alt="profile" />
+<div class="profile-container">
+	<div class="profile">
+		<div class="gradient" />
+		<img src="/profile.png" alt="profile" />
+	</div>
 </div>
 <a class="download-btn a-btn" href="/CV.pdf" download>Download CV</a>
 <a class="contact-btn a-btn" href="mailto:friedrich.fabian@gmx.net">Contact Me</a>
@@ -62,13 +64,12 @@
 	}
 
 	.a-btn {
-		grid-column: span 2;
 		grid-row-start: 3;
 
 		max-height: 4rem;
 
-		font-size: 28px;
 		font-weight: bold;
+		font-size: 24px;
 
 		scale: 0;
 		opacity: 0;
@@ -96,12 +97,19 @@
 		color: var(--background-color);
 	}
 
-	.profile {
+	.profile-container {
 		grid-column-start: 9;
 		grid-column-end: 12;
 		grid-row: span 3;
 
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.profile {
 		position: relative;
+		width: 100%;
 		aspect-ratio: 1/ 1;
 
 		background: radial-gradient(100% 100% at 50% 50%, #1b1c2a 0%, #1f2431 100%);
@@ -110,6 +118,52 @@
 		border-radius: 50%;
 		overflow: hidden;
 		animation: scale-up 1s var(--ease-out-expo);
+	}
+
+	@media (max-width: 1100px) {
+		.profile-container {
+			grid-column-start: 2;
+			grid-column-end: 12;
+			grid-row-start: 1;
+
+			height: 16rem;
+		}
+
+		.profile {
+			width: auto;
+			height: 100%;
+		}
+
+		.text {
+			grid-column-start: 2;
+			grid-column-end: 12;
+			grid-row-start: 2;
+
+			position: relative;
+		}
+
+		.text .name {
+			white-space: revert;
+		}
+
+		.a-btn {
+			font-size: 18px;
+		}
+
+		.download-btn {
+			grid-column-start: 2;
+			grid-column-end: 6;
+		}
+
+		.contact-btn {
+			grid-column-start: 8;
+			grid-column-end: 12;
+		}
+	}
+	@media (max-width: 700px) {
+		.a-btn {
+			font-size: 14px;
+		}
 	}
 
 	.profile .gradient {
