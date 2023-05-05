@@ -1,0 +1,129 @@
+<script>
+	let active = false;
+</script>
+
+<div class="hamburger-wrapper">
+	<div
+		class={`hamburger ${active ? 'open' : ''}`}
+		on:click={() => {
+			active = !active;
+		}}
+	>
+		<span />
+		<span />
+		<span />
+		<span />
+	</div>
+	<div
+		class={`list ${active ? 'open' : 'closed'}`}
+		on:click={() => {
+			active = false;
+		}}
+	>
+		<a href="#home">Home</a>
+		<a href="#education">Education</a>
+		<a href="#projects">Projects</a>
+		<a href="#contact">Contact</a>
+	</div>
+</div>
+
+<style>
+	.hamburger-wrapper {
+		position: relative;
+	}
+
+	@media (min-width: 1000px) {
+		.hamburger-wrapper {
+			display: none;
+		}
+	}
+
+	.hamburger {
+		position: relative;
+
+		height: 1.5rem;
+		width: 2rem;
+
+		cursor: pointer;
+	}
+
+	.list {
+		display: none;
+
+		position: absolute;
+		right: 0;
+	}
+
+	.list.open {
+		display: flex;
+		flex-direction: column;
+
+		margin-top: 1rem;
+
+		border: 1px solid var(--text-color);
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.list a {
+		background-color: var(--background-color);
+		padding: 0.5rem 1rem;
+
+		color: var(--text-color);
+		text-decoration: none;
+		text-align: center;
+
+		border-bottom: 1px solid var(--text-color);
+	}
+
+	.list a:hover {
+		background-color: var(--primary-color);
+		color: var(--background-color);
+	}
+
+	.hamburger span {
+		position: absolute;
+
+		width: 100%;
+		height: 3px;
+		background-color: var(--text-color);
+
+		border-radius: 3px;
+	}
+
+	.hamburger span {
+		transition: all 0.25s ease-in-out;
+	}
+
+	.hamburger span:nth-child(1) {
+		top: 0;
+		left: 0;
+	}
+
+	.hamburger span:nth-child(2),
+	.hamburger span:nth-child(3) {
+		top: 50%;
+		transform: translateY(-50%) rotate(0);
+	}
+
+	.hamburger span:nth-child(4) {
+		top: 100%;
+		left: 0;
+		transform: translateY(-100%);
+	}
+
+	.hamburger.open span:nth-child(4),
+	.hamburger.open span:nth-child(1) {
+		width: 0;
+		top: 50%;
+		left: 50%;
+	}
+
+	.hamburger.open span:nth-child(2) {
+		transform: translateY(-50%) rotate(45deg);
+	}
+
+	.hamburger.open span:nth-child(3) {
+		transform: translateY(-50%) rotate(-45deg);
+	}
+</style>
