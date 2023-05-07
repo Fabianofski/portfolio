@@ -143,25 +143,6 @@
 		.text .name {
 			white-space: revert;
 		}
-
-		.a-btn {
-			font-size: 18px;
-		}
-
-		.download-btn {
-			grid-column-start: 2;
-			grid-column-end: 6;
-		}
-
-		.contact-btn {
-			grid-column-start: 8;
-			grid-column-end: 12;
-		}
-	}
-	@media (max-width: 700px) {
-		.a-btn {
-			font-size: 14px;
-		}
 	}
 
 	.profile .gradient {
