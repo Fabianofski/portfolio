@@ -3,7 +3,8 @@
 	--secondary-background-color: #2a284f;
 	--text-color: #cdd0f5;
 	--primary-color: #eee066;
-
+	--primary-color-filter: brightness(0) saturate(100%) invert(100%) sepia(76%) saturate(1486%)
+		hue-rotate(340deg) brightness(101%) contrast(88%);
 	--ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 

@@ -25,7 +25,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: min(15rem, 10vw);
+		gap: min(15rem, 11vw);
 
 		width: 100%;
 		min-height: 300vh;

@@ -4,7 +4,7 @@
 
 <nav>
 	<a href="#home" class="logo">
-		<img src="/favicon.png" alt="Logo" />
+		<img src="/icons/favicon.png" alt="Logo" />
 		Fabian Friedrich
 	</a>
 	<ul class="list">

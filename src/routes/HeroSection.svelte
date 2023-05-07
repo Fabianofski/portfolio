@@ -41,8 +41,17 @@
 		<img src="/profile.png" alt="profile" />
 	</div>
 </div>
-<a class="download-btn a-btn" href="/CV.pdf" download>Download CV</a>
-<a class="contact-btn a-btn" href="mailto:friedrich.fabian@gmx.net">Contact Me</a>
+<div class="socials">
+	<a href="https://www.github.com/fabianofski">
+		<img src="/icons/github.svg" alt="Link to Github Profile" />
+	</a>
+	<a href="https://f4b1.itch.io/">
+		<img src="/icons/itch.svg" alt="Link to Itch.io Profile" />
+	</a>
+	<a href="https://www.linkedin.com/in/fabian-friedrich-a1206122a/">
+		<img src="/icons/linkedin.svg" alt="Link to LinkedIn Profile" />
+	</a>
+</div>
 
 <style>
 	.text {
@@ -63,38 +72,21 @@
 		white-space: nowrap;
 	}
 
-	.a-btn {
+	.socials {
 		grid-row-start: 3;
-
-		max-height: 4rem;
-
-		font-weight: bold;
-		font-size: 24px;
-
-		scale: 0;
-		opacity: 0;
-		animation: fade-in 1.5s var(--ease-out-expo) forwards,
-			scale-up 1.5s var(--ease-out-expo) forwards;
-	}
-
-	.download-btn {
 		grid-column-start: 2;
-		grid-column-end: 4;
-	}
-
-	.contact-btn {
-		grid-column-start: 5;
 		grid-column-end: 7;
 
-		background-color: var(--background-color);
-
-		color: var(--primary-color);
+		display: flex;
+		gap: 2rem;
 	}
 
-	.contact-btn:hover {
-		background-color: var(--primary-color);
+	.socials img {
+		max-height: 2.5rem;
+	}
 
-		color: var(--background-color);
+	.socials img:hover {
+		filter: var(--primary-color-filter);
 	}
 
 	.profile-container {
@@ -127,6 +119,12 @@
 			grid-row-start: 1;
 
 			height: 16rem;
+		}
+
+		.socials {
+			grid-row-start: 3;
+			grid-column-start: 2;
+			grid-column-end: 10;
 		}
 
 		.profile {
