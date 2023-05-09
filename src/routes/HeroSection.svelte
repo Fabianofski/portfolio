@@ -70,6 +70,7 @@
 
 		font-size: 56px;
 		white-space: nowrap;
+		color: var(--text-color);
 	}
 
 	.socials {

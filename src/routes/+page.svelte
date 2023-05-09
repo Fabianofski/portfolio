@@ -58,7 +58,7 @@
 		gap: 1rem;
 
 		width: 95vw;
-		max-width: 80rem;
+		max-width: 100rem;
 		height: 100%;
 		padding-top: 3rem;
 	}

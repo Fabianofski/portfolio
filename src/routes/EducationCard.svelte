@@ -7,7 +7,7 @@
 	export let description;
 </script>
 
-<div class="card">
+<div class="card-wrapper">
 	<div class="icon">
 		<img src={icon} alt={altText} />
 	</div>
@@ -28,7 +28,7 @@
 </div>
 
 <style>
-	.card {
+	.card-wrapper {
 		display: flex;
 		align-items: center;
 		gap: 1rem;
@@ -42,11 +42,11 @@
 		transition: scale 0.5s var(--ease-out-expo);
 	}
 
-	.card:hover {
+	.card-wrapper:hover {
 		scale: 1.05;
 	}
 
-	.card * {
+	.card-wrapper * {
 		color: var(--background-color);
 	}
 
