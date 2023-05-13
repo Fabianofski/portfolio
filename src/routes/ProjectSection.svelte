@@ -43,14 +43,14 @@
 			<div class="card">
 				<h1>{project.title}</h1>
 				<div class="content">
-					<img src={project.image} alt={`${project.title} - Preview`} />
+					<img src={project.image} alt={`${project.title} - Preview`} class="card-img" />
 					<p>{project.description}</p>
 				</div>
 			</div>
 		</div>
 	{/each}
-	<button on:click={decreaseIndex}>Previous</button>
-	<button on:click={incrementIndex}>Next</button>
+	<button on:click={decreaseIndex} class="previous-btn">Prev.</button>
+	<button on:click={incrementIndex} class="next-btn">Next</button>
 </div>
 
 <style>
@@ -67,8 +67,8 @@
 		top: 50%;
 		transform: translate(-50%, -50%);
 
-		width: 50rem;
-		height: 20rem;
+		width: 60rem;
+		height: 30rem;
 
 		transition: all 1s var(--ease-out-expo);
 	}
@@ -83,7 +83,7 @@
 		width: 100%;
 		height: 100%;
 		background-color: var(--text-color);
-		padding: 1rem 2rem;
+		padding: 2rem;
 
 		border-radius: 10px;
 
@@ -122,13 +122,36 @@
 
 	.content {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		justify-content: space-between;
 		gap: 2rem;
+
+		height: 100%;
 	}
 
 	.content > * {
 		width: 100%;
 		border-radius: 10px;
+	}
+
+	.card-img {
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.previous-btn,
+	.next-btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 5;
+	}
+
+	.previous-btn {
+		left: 18%;
+	}
+
+	.next-btn {
+		right: 18%;
 	}
 </style>
