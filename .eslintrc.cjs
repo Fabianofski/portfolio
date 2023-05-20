@@ -1,8 +1,8 @@
 module.exports = {
 	root: true,
-	parser: '@typescript-eslint/parser',
-	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
-	plugins: ['svelte3', '@typescript-eslint'],
+	parser: '@typescript.svg-eslint/parser',
+	extends: ['eslint:recommended', 'plugin:@typescript.svg-eslint/recommended', 'prettier'],
+	plugins: ['svelte3', '@typescript.svg-eslint'],
 	ignorePatterns: ['*.cjs'],
 	overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
 	settings: {

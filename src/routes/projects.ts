@@ -24,7 +24,7 @@ export const projects: project[] = [
 		`,
 		image: 'https://img.itch.zone/aW1hZ2UvMTY2MTMwMi85Nzk2MTk4LnBuZw==/original/H%2Fsbmh.png',
 		links: [],
-		tools: [],
+		tools: ['csharp', 'unity'],
 		classes: []
 	},
 	{
@@ -38,7 +38,7 @@ export const projects: project[] = [
 		`,
 		image: 'https://img.itch.zone/aW1hZ2UvMTY2MTMwMi85Nzk2MTk4LnBuZw==/original/H%2Fsbmh.png',
 		links: [],
-		tools: [],
+		tools: ['unity', 'csharp'],
 		classes: []
 	},
 	{
@@ -52,7 +52,7 @@ export const projects: project[] = [
 		`,
 		image: 'https://img.itch.zone/aW1hZ2UvMTY2MTMwMi85Nzk2MTk4LnBuZw==/original/H%2Fsbmh.png',
 		links: [],
-		tools: [],
+		tools: ['nextjs', 'typescript', 'html', 'css', 'nodejs', 'mongodb'],
 		classes: []
 	},
 	{
@@ -66,7 +66,7 @@ export const projects: project[] = [
 		`,
 		image: 'https://img.itch.zone/aW1hZ2UvMTY2MTMwMi85Nzk2MTk4LnBuZw==/original/H%2Fsbmh.png',
 		links: [],
-		tools: [],
+		tools: ['svelte', 'typescript', 'html', 'css'],
 		classes: []
 	}
 ];

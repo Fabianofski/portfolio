@@ -1,4 +1,5 @@
-<script lang="ts">
+<script>
+	import SvelteTooltip from 'svelte-tooltip';
 	import { projects } from './projects';
 
 	let projectList = projects;
@@ -41,7 +42,20 @@
 	{#each projectList as project}
 		<div class={`card-wrapper ${project.classes.join(' ')}`}>
 			<div class="card">
-				<h1>{project.title}</h1>
+				<div class="title">
+					<h1 class="project-title">{project.title}</h1>
+					<div class="icons">
+						{#each project.tools as tool, i}
+							<SvelteTooltip tip={tool} color="var(--background-color)">
+								<img
+									src={`/icons/${tool}.svg`}
+									alt={`${tool} Icon`}
+									style={`z-index: ${project.tools.length - i};`}
+								/>
+							</SvelteTooltip>
+						{/each}
+					</div>
+				</div>
 				<div class="content">
 					<img src={project.image} alt={`${project.title} - Preview`} class="card-img" />
 					<p>{project.description}</p>
@@ -118,6 +132,56 @@
 
 	.card-wrapper.active {
 		z-index: 2;
+	}
+
+	.title {
+		position: relative;
+
+		width: 100%;
+		height: 3rem;
+	}
+
+	.project-title,
+	.icons {
+		position: absolute;
+		transform: translate(-50%, -50%);
+		top: 50%;
+	}
+
+	.project-title {
+		left: 50%;
+	}
+
+	.icons {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+
+		transform: translateY(-50%);
+		right: 0;
+
+		height: 3rem;
+
+		color: var(--text-color);
+	}
+
+	:global(.icons > *) {
+		margin-left: -0.5rem;
+	}
+
+	.icons img {
+		position: relative;
+
+		height: 3rem;
+
+		transition: all 0.5s var(--ease-out-expo);
+	}
+
+	.icons img:hover {
+		z-index: 99 !important;
+		margin-bottom: 1rem;
+
+		scale: 1.1;
 	}
 
 	.content {
