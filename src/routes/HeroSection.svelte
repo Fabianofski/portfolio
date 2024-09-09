@@ -1,38 +1,38 @@
 <script>
 	import Greetings from './Greetings.svelte';
 	import { onMount } from 'svelte';
-	onMount(() => {
-		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-		const name = document.querySelector('.name');
-		const text = name.dataset.value;
-		let interval = null;
-		let iteration = 0;
-		interval = setInterval(() => {
-			name.innerText = text
-				.split('')
-				.map((letter, index) => {
-					if (index < iteration) {
-						return name.dataset.value[index];
-					}
-					if (index < iteration + 4) {
-						return letters[Math.floor(Math.random() * 26)];
-					}
-				})
-				.join('');
-
-			if (iteration >= name.dataset.value.length) {
-				clearInterval(interval);
-			}
-
-			iteration += 1 / 3;
-		}, 70);
-	});
+//	onMount(() => {
+//		const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//
+//		const name = document.querySelector('.name');
+//		const text = name.dataset.value;
+//		let interval = null;
+//		let iteration = 0;
+//		interval = setInterval(() => {
+//			name.innerText = text
+//				.split('')
+//				.map((letter, index) => {
+//					if (index < iteration) {
+//						return name.dataset.value[index];
+//					}
+//					if (index < iteration + 4) {
+//						return letters[Math.floor(Math.random() * 26)];
+//					}
+//				})
+//				.join('');
+//
+//			if (iteration >= name.dataset.value.length) {
+//				clearInterval(interval);
+//			}
+//
+//			iteration += 1 / 3;
+//		}, 70);
+//	});
 </script>
 
 <div class="text">
 	<Greetings />
-	<h1 data-value="FABIAN FRIEDRICH" class="name" />
+	<h1 data-value="FABIAN FRIEDRICH" class="name"> FABIAN FRIEDRICH </h1>
 </div>
 
 <div class="profile-container">
