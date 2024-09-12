@@ -2,7 +2,7 @@
 	export let icon;
 	export let altText;
 	export let duration;
-	export let grade;
+	export let grade = undefined;
 	export let type;
 	export let description;
 </script>
@@ -63,6 +63,10 @@
 		border-radius: 50%;
 		aspect-ratio: 1/1;
 	}
+
+    .icon img {
+        height: 80%;
+    }
 
 	.details {
 		display: flex;

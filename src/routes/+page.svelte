@@ -28,7 +28,6 @@
 		gap: min(15rem, 11vw);
 
 		width: 100%;
-		min-height: 300vh;
 
 		background: linear-gradient(
 			135deg,
@@ -37,6 +36,7 @@
 		);
 		background-size: 300%;
 		background-position-x: 100%;
+        margin-top: 2.5rem;
 		padding-top: min(12rem, 10vw);
 
 		animation: background-fade-in 3s var(--ease-out-expo);

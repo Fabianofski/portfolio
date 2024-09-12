@@ -4,8 +4,8 @@
 
 <div class="cards">
 	<EducationCard
-		icon="/icons/university.svg"
-		altText="university icon"
+		icon="/icons/school.svg"
+		altText="school"
 		duration="2014-2021"
 		grade="1,8"
 		type="A-Level"
@@ -13,17 +13,17 @@
 	/>
 	<EducationCard
 		icon="/icons/university.svg"
-		altText="university icon"
+		altText="university"
 		duration="2021-2024"
-		grade="?"
-		type="Dual Study Computer Science (Theory Semesters)"
-		description="Highschool for Economics and Law Berlin"
+		grade="1.5"
+		type="Dual Study Computer Science"
+		description="Highschool for Economics and Law Berlin // Bosch Siemens Householding GmbH"
 	/>
 	<EducationCard
-		icon="/icons/university.svg"
-		altText="university icon"
-		duration="2021-2024"
-		type="Dual Study Computer Science (Practical Semesters)"
+		icon="/icons/work.svg"
+		altText="work"
+		duration="2024-today"
+		type="Software Engineer"
 		description="Bosch Siemens Householding GmbH"
 	/>
 </div>
